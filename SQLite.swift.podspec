@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
     ss.private_header_files = 'Sources/SQLiteObjc/*.h'
     ss.xcconfig = {
       'OTHER_SWIFT_FLAGS' => '$(inherited) -DSQLITE_SWIFT_SQLCIPHER',
-      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) -DSQLITE_SWIFT_SQLCIPHER SQLITE_HAS_CODEC=1'
+      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SQLITE_SWIFT_SQLCIPHER=1 SQLITE_HAS_CODEC=1'
     }
     ss.dependency 'SQLCipher', '>= 3.4.0'
 
