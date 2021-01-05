@@ -25,9 +25,9 @@
 @import Foundation;
 #if defined(SQLITE_SWIFT_STANDALONE)
 @import sqlite3;
-#elseif SQLITE_SWIFT_SQLCIPHER
+#elif defined(SQLITE_SWIFT_SQLCIPHER)
 @import SQLCipher;
-#elseif os(Linux)
+#elif __linux__
 @import CSQLite;
 #else
 @import SQLite3;
